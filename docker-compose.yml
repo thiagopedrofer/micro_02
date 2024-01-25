@@ -23,7 +23,9 @@ services:
             context: ./
             dockerfile: DockerFile
         command:
-            -   'php artisan queue:work'
+            - php
+            - artisan
+            - queue:work
         restart: unless-stopped
         volumes:
             - ./:/var/www
